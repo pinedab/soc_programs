@@ -8,4 +8,4 @@ Then this one --> https://services.github.com/on-demand/github-cli/make-local-ch
 
 And #1mwtt is located here --> https://github.com/1millionwomentotech/toolkitten/tree/master/summer-of-code
 
-More information is here --> https://1millionwomentotech.com/summerofcode1/
+More information is here --> https://1millionwomentotech.com/summerofcode1/ 
