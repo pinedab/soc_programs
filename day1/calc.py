@@ -47,5 +47,16 @@ print('blink ' * 4)
 print('moo'*3)
 # 'moomoomoo'
 
+###APOSTROPHES
+# YES print('moo\'S')
+# YES print("moo's")
+# NO print('moo/'s')
+
+
+
+
+
+
+
 
 
