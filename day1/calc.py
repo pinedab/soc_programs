@@ -51,6 +51,10 @@ print('moo'*3)
 # YES print('moo\'S')
 # YES print("moo's")
 # NO print('moo/'s')
+# print('yes\\no')   ---> yes\no == print('yes\no')
+
+
+
 
 
 
