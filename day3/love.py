@@ -2,7 +2,18 @@
 
  #Bracket notation
 
-a = 'happy'
+# a = 'happy'
 
-print(a[2]) #p
-print(a[-1]) #y
+# print(a[2]) #p
+# print(a[-1]) #y
+
+# FOR LOOP
+name = "Arcalis Bellanueve"
+result = ""
+
+for i in range(0, len(name)):
+  # print(name[i])
+  if i % 2 == 0: #every second letter
+    print(name[i])
+    result = result + name[i]
+    print('result just changed to: ' + result)
