@@ -15,12 +15,15 @@ print(48618000 / (60*60*24*365) * 10)
 # 5. Full name greeting. Write a program that asks for a 
 # person’s first name, then middle, and then last. Finally,
 # it should greet the person using their full name.
-first = input("Enter first name: ")
-mid = input("Enter second name: ") + ' '
-last = input("Enter last name: ")
-print("Nice to meet you, " + first + ' ' + mid + last)
+first = input("Enter first name: ").lower()
+mid = input("Enter second name: ").lower() + ' '
+last = input("Enter last name: ").lower()
+print("Nice to meet you, " + first.capitalize() + ' ' + mid.capitalize() + last.capitalize())
 # 6. Bigger, better favorite number. Write a program that
 # asks for a person’s favorite number. Have your program 
 # add 1 to the number, and then suggest the result as a 
 # bigger and better favorite number. (Do be tactful 
 # about it, though.)
+fav = input("What's your favorite number?")
+big = int(fav) + 1
+print("A bigger and better number is this: " + str(big))
