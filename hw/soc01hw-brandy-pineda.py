@@ -43,10 +43,7 @@ print("WHAT DO YOU MEAN '" + employee.upper() + "'?! YOU ARE FIRED!!")
 
 # 8. Table of contents. Here’s something for you to do in 
 # order to play around more with center, ljust, and rjust: 
-# write a program that will display a table of contents so 
-# that it looks like this:
-# Table of Contents
-# Chapter 1: Getting Started page 1 Chapter 2: Numbers page 9 Chapter 3: Letters page 13
+# write a program that will display a table of contents 
 
 c = "Chapter 1: Getting Started"
 cc = " Chapter 2: Numbers"
@@ -59,8 +56,7 @@ print ("The original string is : \n", c, "\n")
 print ("The original string is : \n", cc, "\n")
 print ("The original string is : \n", ccc, "\n")
  
-# Printing the right aligned string
-# with "-" padding 
+# Printing aligned strings
 print ("The right aligned: ")
 print (c + p.rjust(40, '.'))
 print (cc + pp.rjust(40, '.'))
@@ -75,3 +71,40 @@ print ("The center aligned: ")
 print ((c + ' - ' + p).center(40, '.'))
 print ((cc + ' - ' + pp).center(40, '.'))
 print ((ccc + ' - ' +ppp).center(40, '.'))
+
+# DAY4
+# 9. “99 Bottles of Beer on the Wall.” Write a program that
+# prints out the lyrics to that beloved classic, “99 Bottles
+# of Beer on the Wall.”
+
+# 10a. Deaf grandma. Whatever you say to Grandma (whatever you type
+# in), she should respond with this: HUH?! SPEAK UP, GIRL! Unless
+# you shout it (type in all capitals). If you shout, she can
+# hear you (or at least she thinks so) and yells back: 
+# NO, NOT SINCE 1938! To make your program really believable,
+# have Grandma shout a different year each time, maybe any 
+# year at random between 1930 and 1950. You can’t stop 
+# talking to Grandma until you shout BYE.
+
+# 10b. Deaf grandma extended. What if Grandma doesn’t want 
+# you to leave? When you shout BYE, she could pretend not to
+# hear you. Change your previous program so that you have to 
+# shout BYE three times in a row. Make sure to test your 
+# program: if you shout BYE three times but not in a row, 
+# you should still be talking to Grandma.
+
+# 11. Leap years. Write a program that asks for a starting 
+# year and an ending year and then puts all the leap years
+# between them (and including them, if they are also leap
+# years). Leap years are years divisible by 4 (like 1984 
+# and 2004). However, years divisible by 100 are not leap
+# years (such as 1800 and 1900) unless they are also 
+# divisible by 400 (such as 1600 and 2000, which were 
+# in fact leap years). What a mess!
+
+# 12. Find something today in your life, that is a 
+# calculation. Go for a walk, look around the park, try 
+# to count something. Anything! And write a program about
+# it. e.g. number of stairs, steps, windows, leaves 
+# estimated in the park, kids, dogs, estimate your books
+# by bookshelf, toiletries, wardrobe.
