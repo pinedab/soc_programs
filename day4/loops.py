@@ -15,11 +15,20 @@ while j < 11:
 	j += 1
 print('____\n')
 
-## FOR ## for x in range(10): #range(start, end noninclusive,
-increment)     print(x) # 0 1 2 3 4 5 6 7 8 9 print('____\n')  dogs =
-["Bean Fouler", "Chewy Pena",  "Grizz Bearington", "Nina Pineda"]
-skill = ["napper", "jumper", "barker", "cuddler"] c = 0 for s in dogs:
-print(s + " is an amazing " + skill[c] + "!")     c += 1
+## FOR ##
+for x in range(10): #range(start, end noninclusive,increment)     
+	print(x)         # 0 1 2 3 4 5 6 7 8 9 
+
+print('____\n')  
+
+dogs =["Bean Fouler", "Chewy Pena",  "Grizz Bearington", "Nina Pineda"]
+skill = ["napper", "jumper", "barker", "cuddler"] 
+
+c = 0 
+for s in dogs:
+	print(s + " is an amazing " + skill[c] + "!")     
+	c += 1
+
 print('____\n')
 
 
