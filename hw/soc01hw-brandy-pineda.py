@@ -74,42 +74,70 @@
 
 # # DAY4
 # # 9. “99 Bottles of Beer on the Wall.” Write a program that
-# prints out the lyrics to that beloved classic, “99 Bottles
-# of Beer on the Wall.”
-print()
-bottles = input("How many bottles are on the wall? ")
-b = 0
-while bottles.isalpha():
-	bottles = input("How many bottles are on the wall?")
-	print("Please type a number")
-if not bottles.isalpha() and int(bottles) > 0: 
-	b = int(bottles)
-for x in range(b, -1, -1):
-	if x == 0:
-		print("No more bottles of beer on the wall, no more bottles of beer.")
-		print("Go to the store and buy some more, " + bottles + " bottles of beer on the wall.")
-	elif x == 1:
-		print("1 bottle of beer on the wall, 1 bottle of beer.")
-		print("Take one down and pass it around, no more bottles of beer on the wall.")
-	else:
-		print(str(x) + " bottles of beer on the wall, " + str(x) + " bottles of beer.")
-		print("Take one down and pass it around, " + str(x - 1) + " bottle of beer on the wall.")
+# # prints out the lyrics to that beloved classic, “99 Bottles
+# # of Beer on the Wall.”
+# print()
+# bottles = input("How many bottles are on the wall? ")
+# b = 0
+# while bottles.isalpha():
+# 	bottles = input("How many bottles are on the wall?")
+# 	print("Please type a number")
+# if not bottles.isalpha() and int(bottles) > 0: 
+# 	b = int(bottles)
+# for x in range(b, -1, -1):
+# 	if x == 0:
+# 		print("No more bottles of beer on the wall, no more bottles of beer.")
+# 		print("Go to the store and buy some more, " + bottles + " bottles of beer on the wall.")
+# 	elif x == 1:
+# 		print("1 bottle of beer on the wall, 1 bottle of beer.")
+# 		print("Take one down and pass it around, no more bottles of beer on the wall.")
+# 	else:
+# 		print(str(x) + " bottles of beer on the wall, " + str(x) + " bottles of beer.")
+# 		print("Take one down and pass it around, " + str(x - 1) + " bottle of beer on the wall.")
 
-# 10a. Deaf grandma. Whatever you say to Grandma (whatever you type
-# in), she should respond with this: HUH?! SPEAK UP, GIRL! Unless
-# you shout it (type in all capitals). If you shout, she can
-# hear you (or at least she thinks so) and yells back: 
-# NO, NOT SINCE 1938! To make your program really believable,
-# have Grandma shout a different year each time, maybe any 
-# year at random between 1930 and 1950. You can’t stop 
+# # 10a. Deaf grandma. Whatever you say to Grandma (whatever you type
+# # in), she should respond with this: HUH?! SPEAK UP, GIRL! Unless
+# # you shout it (type in all capitals). If you shout, she can
+# # hear you (or at least she thinks so) and yells back: 
+# # NO, NOT SINCE 1938! To make your program really believable,
+# # have Grandma shout a different year each time, maybe any 
+# # year at random between 1930 and 1950. You can’t stop 
 # talking to Grandma until you shout BYE.
+# import random
+# reply = input("What do you want to say to grandma?")
+# pw = "BYE" 
 
-# 10b. Deaf grandma extended. What if Grandma doesn’t want 
-# you to leave? When you shout BYE, she could pretend not to
-# hear you. Change your previous program so that you have to 
-# shout BYE three times in a row. Make sure to test your 
-# program: if you shout BYE three times but not in a row, 
-# you should still be talking to Grandma.
+# while reply != pw:
+# 	if not reply.isupper():
+# 		print("HUH?! SPEAK UP, GIRL!")
+# 		reply = input("What do you want to say to grandma?")
+# 	else:		
+# 		y = random.randint(1930,1950)
+# 		print("NO, NOT SINCE " + str(y) + ", HONEY!")
+# 		reply = input("What do you want to say to grandma?")
+
+
+
+# # 10b. Deaf grandma extended. What if Grandma doesn’t want 
+# # you to leave? When you shout BYE, she could pretend not to
+# # hear you. Change your previous program so that you have to 
+# # shout BYE three times in a row. Make sure to test your 
+# # program: if you shout BYE three times but not in a row, 
+# # you should still be talking to Grandma.
+
+import random
+reply = input("What do you want to say to grandma?")
+pw = "BYE" 
+
+while reply != (pw + ' ' + pw + ' ' + pw):
+	if not reply.isupper():
+		print("HUH?! SPEAK UP, GIRL!")
+		reply = input("")
+	else:		
+		y = random.randint(1930,1950)
+		print("NO, NOT SINCE " + str(y) + ", HONEY!")
+		reply = input("")
+print("BYE,SWEETIE! COME BACK SOON!")
 
 # 11. Leap years. Write a program that asks for a starting 
 # year and an ending year and then puts all the leap years
