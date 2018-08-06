@@ -295,20 +295,31 @@
 # print()
 
 
-# 15. Write a function that prints out "moo" n times.
-def cow_noise(n = 1, sound = "moo "):
-	print(sound * n)
+# # 15. Write a function that prints out "moo" n times.
+# SIDE EFFECT OF print()
+# def cow_noise(n = 1, sound = "moo "):
+# 	print(sound * n)
 
-print("Fiona the baby cow goes: ")
-cow_noise()
-print("Lucy the cow goes: ")
-cow_noise(3)
-print("Daddy bull goes ")
-cow_noise(2, "MOOOO ")
-print()
+# print("Fiona the baby cow goes: ")
+# cow_noise()
+# print("Lucy the cow goes: ")
+# cow_noise(3)
+# print("Daddy bull goes ")
+# cow_noise(2, "MOOOO ")
+# print()
+
+# CLEANER - using return
+# def cow_noise(n = 1, sound = "moo "):
+# 	return sound * n
+
+# print("Fiona the baby cow goes: " + cow_noise())
+# print("Lucy the cow goes: " + cow_noise(3))
+# print("Daddy bull goes: " + cow_noise(2, "MOOOO "))
+# print()
+
 # 16. Old-school Roman numerals. In the early days of Roman numerals, the 
 # Romans didn’t bother with any of this new-fangled subtraction “IX” 
-# nonsense. No Mylady, it was straight addition, biggest to littlest — so
+# nonsense. No, milady, it was straight addition, biggest to littlest — so
 # 9 was written “VIIII,” and so on. Write a method that when passed an 
 # integer between 1 and 3000 (or so) returns a string containing the proper
 # old-school Roman numeral. In other words, old_roman_numeral 4 should 
@@ -316,6 +327,46 @@ print()
 # Hint: Use the integer division and modulus methods. For reference, these
 # are the values of the letters used: 
 # I = 1 V = 5 X = 10 L = 50 C = 100 D = 500 M = 1000
+def old_school(n = 1):
+	rom = ""
+	left = n
+	while (not (left == 0)):
+		if (n >= 1000):
+			m = n // 1000
+			left -= (m * 1000)
+			rom += ("M" * m)
+		if (left >= 500):
+			d = left // 500
+			left -= (d * 500)
+			rom += ("D" * d)
+		if (left >= 100):
+			c = left // 100
+			left -= (c * 100)
+			rom += ("C" * c)
+		if (left >= 50):
+			l = left // 50
+			left -= (l * 50)
+			rom += ("L" * l)
+		if (left >= 10):
+			x = left // 10
+			left -= (x * 10)
+			rom += ("X" * x)
+		if (left >= 5):
+			v = left // 5
+			left -= (v * 5)
+			rom += ("V" * v)
+		if (left >= 1):
+			i = left // 1
+			left -= (i * 1)
+			rom += ("I" * i)
+
+	return print(rom)
+
+old_school(4)
+old_school(9)
+old_school(3000)
+old_school(2999)
+print()
 
 # 17. “Modern” Roman numerals. Eventually, someone thought it would be 
 # terribly clever if putting a smaller number before a larger one meant
