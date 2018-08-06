@@ -32,6 +32,7 @@
 # fav = input("What's your favorite number?")
 # big = int(fav) + 1
 # print("A bigger and better number is this: " + str(big))	
+# print();
 
 # # 7. Angry boss. Write an angry boss program that rudely 
 # # asks what you want. Whatever you answer, the angry boss
@@ -45,32 +46,33 @@
 # # order to play around more with center, ljust, and rjust: 
 # # write a program that will display a table of contents 
 
-# c = "Chapter 1: Getting Started"
-# cc = " Chapter 2: Numbers"
-# ccc = "Chapter 3: Letters"
-# p = "page 1"
-# pp = "page 9"
-# ppp = "page 13" 
+# ch1 = "Chapter 1: Getting Started"
+# ch2 = " Chapter 2: Numbers"
+# ch3 = "Chapter 3: Letters"
+# p1 = "page 1"
+# p2 = "page 9"
+# p3 = "page 13" 
 # # Printing the original string
-# print ("The original string is : \n", c, "\n")
-# print ("The original string is : \n", cc, "\n")
-# print ("The original string is : \n", ccc, "\n")
+# print ("The original string is : \n", c1, "\n")
+# print ("The original string is : \n", c2, "\n")
+# print ("The original string is : \n", c3, "\n")
  
 # # Printing aligned strings
 # print ("The right aligned: ")
-# print (c + p.rjust(40, '.'))
-# print (cc + pp.rjust(40, '.'))
-# print (ccc + ppp.rjust(40, '.'))
+# print (c1 + p1.rjust(40, '.'))
+# print (c2 + p2.rjust(40, '.'))
+# print (c3 + p3.rjust(40, '.'))
 # print()
 # print ("The left aligned: ")
-# print (p.ljust(40, '.') + c)
-# print (pp.ljust(40, '.') + cc)
-# print (ppp.ljust(40, '.') + ccc)
+# print (p1.ljust(40, '.') + c1)
+# print (p2.ljust(40, '.') + c2)
+# print (p3.ljust(40, '.') + c3)
 # print()
 # print ("The center aligned: ")
-# print ((c + ' - ' + p).center(40, '.'))
-# print ((cc + ' - ' + pp).center(40, '.'))
-# print ((ccc + ' - ' +ppp).center(40, '.'))
+# print ((c1 + ' - ' + p1).center(40, '.'))
+# print ((c2 + ' - ' + p2).center(40, '.'))
+# print ((c3 + ' - ' +p3).center(40, '.'))
+# print()
 
 # # DAY4
 # # 9. “99 Bottles of Beer on the Wall.” Write a program that
@@ -94,6 +96,7 @@
 # 	else:
 # 		print(str(x) + " bottles of beer on the wall, " + str(x) + " bottles of beer.")
 # 		print("Take one down and pass it around, " + str(x - 1) + " bottle of beer on the wall.")
+# print()
 
 # # 10a. Deaf grandma. Whatever you say to Grandma (whatever you type
 # # in), she should respond with this: HUH?! SPEAK UP, GIRL! Unless
@@ -115,7 +118,7 @@
 # 		y = random.randint(1930,1950)
 # 		print("NO, NOT SINCE " + str(y) + ", HONEY!")
 # 		reply = input("What do you want to say to grandma?")
-
+# print()
 
 
 # # 10b. Deaf grandma extended. What if Grandma doesn’t want 
@@ -124,29 +127,47 @@
 # # shout BYE three times in a row. Make sure to test your 
 # # program: if you shout BYE three times but not in a row, 
 # # you should still be talking to Grandma.
+# import random
+# reply = input("What do you want to say to grandma?")
+# pw = "BYE" 
 
-import random
-reply = input("What do you want to say to grandma?")
-pw = "BYE" 
+# while reply != (pw + ' ' + pw + ' ' + pw):
+# 	if not reply.isupper():
+# 		print("HUH?! SPEAK UP, GIRL!")
+# 		reply = input("")
+# 	else:		
+# 		y = random.randint(1930,1950)
+# 		print("NO, NOT SINCE " + str(y) + ", HONEY!")
+# 		reply = input("")
+# print("BYE,SWEETIE! COME BACK SOON!")
+# print()
 
-while reply != (pw + ' ' + pw + ' ' + pw):
-	if not reply.isupper():
-		print("HUH?! SPEAK UP, GIRL!")
-		reply = input("")
-	else:		
-		y = random.randint(1930,1950)
-		print("NO, NOT SINCE " + str(y) + ", HONEY!")
-		reply = input("")
-print("BYE,SWEETIE! COME BACK SOON!")
+# # 11. Leap years. Write a program that asks for a starting 
+# # year and an ending year and then puts all the leap years
+# # between them (and including them, if they are also leap
+# # years). Leap years are years divisible by 4 (like 1984 
+# # and 2004). However, years divisible by 100 are not leap
+# # years (such as 1800 and 1900) unless they are also 
+# # divisible by 400 (such as 1600 and 2000, which were 
+# # in fact leap years). What a mess!
+# print("Calculating Leap Years \n")
+# start_str = input("Enter a start year: ")
+# end_str = input("Enter an end year: ")
+# s = int(start_str)
+# e = int(end_str)
+# leaps = ''
 
-# 11. Leap years. Write a program that asks for a starting 
-# year and an ending year and then puts all the leap years
-# between them (and including them, if they are also leap
-# years). Leap years are years divisible by 4 (like 1984 
-# and 2004). However, years divisible by 100 are not leap
-# years (such as 1800 and 1900) unless they are also 
-# divisible by 400 (such as 1600 and 2000, which were 
-# in fact leap years). What a mess!
+# for y in range(s,e):
+# 	if (y % 100 == 0):
+# 		if y % 400 == 0:
+# 			leaps += (str(y) + ' ')
+# 		else:
+# 			pass 
+# 	elif (y % 4 == 0):
+# 		leaps += (str(y) + ' ')
+
+# print("Here are the leap years: " + leaps)
+# print();
 
 # 12. Find something today in your life, that is a 
 # calculation. Go for a walk, look around the park, try 
@@ -154,3 +175,36 @@ print("BYE,SWEETIE! COME BACK SOON!")
 # it. e.g. number of stairs, steps, windows, leaves 
 # estimated in the park, kids, dogs, estimate your books
 # by bookshelf, toiletries, wardrobe.
+import random
+
+counting = True
+while counting:
+	destination = ["the park", "the zoo", "your house"]
+	num = random.randint(0,len(destination)-1)
+	place = destination[num]
+	print("TODAY YOU DECIDED TO COUNT SOME STUFF AT " + place.upper())
+
+	stuff = ["bird", "tiger", "book"]
+	amount = random.randint(1,21)
+	print("YOU LOOK AROUND AND SEE THERE ARE " + str(amount) +
+	" " + stuff[num].upper() +"S TO COUNT!")
+
+	counter = 0	
+	variations = ["feathers", "stripes", "chapters"]
+	total = random.randint(1,21)
+	print()
+	
+	while counter != total:
+		to_count = input("Press ENTER to find out how many " + variations[num] + " each " +
+		stuff[num] + " has!")
+		if not to_count:
+			counter += 1
+		else:
+		    print ("Got start counting all over!")
+
+	print("Congrats! You counted " + str(counter) + " " + variations[num] +
+		" on each " + stuff[num] + " today at " + 
+		destination[num] + "!")
+	counting = not counting
+
+
