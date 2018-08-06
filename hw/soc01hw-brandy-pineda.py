@@ -255,48 +255,57 @@
 # final = [print(w) for w in sorted(words)]
 # print()
 
-# 14. Table of contents. Write a table of contents program here. Start the 
-# program with a list holding all of the information for your table of 
-# contents (chapter names, page numbers, and so on). Then print out the 
-# information from the list in a beautifully formatted table of contents.
-# Use string formatting such as left align, right align, center.
-import random
-organizing = True
-titles = ["Growing Up", "Drowning", "To Enjoy, or Not To Enjoy", "Flourish", "ANTI"]
-pages = [random.randint(0,20), random.randint(21, 40), random.randint(41, 66),
-random.randint(67, 87), random.randint(88,111)]
-# s = [p for p in pages]
-# print(s)
-chaps = ["Chapter 1: ", "Chapter 2: ", "Chapter 3: ", "Chapter 4: ", "Chapter 5: "]
+# # 14. Table of contents. Write a table of contents program here. Start the 
+# # program with a list holding all of the information for your table of 
+# # contents (chapter names, page numbers, and so on). Then print out the 
+# # information from the list in a beautifully formatted table of contents.
+# # Use string formatting such as left align, right align, center.
+# import random
+# organizing = True
+# titles = ["Growing Up", "Drowning", "To Enjoy, or Not To Enjoy", "Flourish", "ANTI"]
+# pages = [random.randint(0,20), random.randint(21, 40), random.randint(41, 66),
+# random.randint(67, 87), random.randint(88,111)]
+# # s = [p for p in pages]
+# # print(s)
+# chaps = ["Chapter 1: ", "Chapter 2: ", "Chapter 3: ", "Chapter 4: ", "Chapter 5: "]
 
-print("WE ARE ALIGNING THE TABLE OF CONTENTS FOR YOUR NEXT BOOK!")
-print("CHOOSE AND CHANGE A PREVIEW OPTION: \n0 - LEFT ALIGNED\n1 - CENTER ALIGNED\n2 - RIGHT ALIGNED\n3 - EXIT")
+# print("WE ARE ALIGNING THE TABLE OF CONTENTS FOR YOUR NEXT BOOK!")
+# print("CHOOSE AND CHANGE A PREVIEW OPTION: \n0 - LEFT ALIGNED\n1 - CENTER ALIGNED\n2 - RIGHT ALIGNED\n3 - EXIT")
 
 
-while organizing:
-	o = input()
-	if o == '0':
-		for x in range(0, len(chaps)):	
-			page_str = str(pages[x])	
-			print (page_str.ljust(40, '.') + chaps[x] + titles[x])
-	elif o == '1':
-		for i in range(0, len(chaps)):	
-			page_str = str(pages[i])	
-			print((chaps[i] + titles[i]).center(40,'.') + page_str)
-	elif o == '2':
-		for j in range(0, len(chaps)):	
-			page_str = str(pages[j])	
-			print (chaps[j] + titles[j] + page_str.rjust(40, '.'))
-	elif o == '3':
-		organizing = not organizing
-	else:
-		print("INVALID: Try again")
+# while organizing:
+# 	o = input()
+# 	if o == '0':
+# 		for x in range(0, len(chaps)):	
+# 			page_str = str(pages[x])	
+# 			print (page_str.ljust(40, '.') + chaps[x] + titles[x])
+# 	elif o == '1':
+# 		for i in range(0, len(chaps)):	
+# 			page_str = str(pages[i])	
+# 			print((chaps[i] + titles[i]).center(40,'.') + page_str)
+# 	elif o == '2':
+# 		for j in range(0, len(chaps)):	
+# 			page_str = str(pages[j])	
+# 			print (chaps[j] + titles[j] + page_str.rjust(40, '.'))
+# 	elif o == '3':
+# 		organizing = not organizing
+# 	else:
+# 		print("INVALID: Try again")
 
-print()
+# print()
 
 
 # 15. Write a function that prints out "moo" n times.
+def cow_noise(n = 1, sound = "moo "):
+	print(sound * n)
 
+print("Fiona the baby cow goes: ")
+cow_noise()
+print("Lucy the cow goes: ")
+cow_noise(3)
+print("Daddy bull goes ")
+cow_noise(2, "MOOOO ")
+print()
 # 16. Old-school Roman numerals. In the early days of Roman numerals, the 
 # Romans didn’t bother with any of this new-fangled subtraction “IX” 
 # nonsense. No Mylady, it was straight addition, biggest to littlest — so
