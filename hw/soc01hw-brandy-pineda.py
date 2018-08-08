@@ -317,56 +317,56 @@
 # print("Daddy bull goes: " + cow_noise(2, "MOOOO "))
 # print()
 
-# 16. Old-school Roman numerals. In the early days of Roman numerals, the 
-# Romans didn’t bother with any of this new-fangled subtraction “IX” 
-# nonsense. No, milady, it was straight addition, biggest to littlest — so
-# 9 was written “VIIII,” and so on. Write a method that when passed an 
-# integer between 1 and 3000 (or so) returns a string containing the proper
-# old-school Roman numeral. In other words, old_roman_numeral 4 should 
-# return 'IIII'. Make sure to test your method on a bunch of different numbers.
-# Hint: Use the integer division and modulus methods. For reference, these
-# are the values of the letters used: 
-# I = 1 V = 5 X = 10 L = 50 C = 100 D = 500 M = 1000
-def old_school(n = 1):
-	rom = ""
-	left = n
-	while (not (left == 0)):
-		if (n >= 1000):
-			m = n // 1000
-			left -= (m * 1000)
-			rom += ("M" * m)
-		if (left >= 500):
-			d = left // 500
-			left -= (d * 500)
-			rom += ("D" * d)
-		if (left >= 100):
-			c = left // 100
-			left -= (c * 100)
-			rom += ("C" * c)
-		if (left >= 50):
-			l = left // 50
-			left -= (l * 50)
-			rom += ("L" * l)
-		if (left >= 10):
-			x = left // 10
-			left -= (x * 10)
-			rom += ("X" * x)
-		if (left >= 5):
-			v = left // 5
-			left -= (v * 5)
-			rom += ("V" * v)
-		if (left >= 1):
-			i = left // 1
-			left -= (i * 1)
-			rom += ("I" * i)
+# # 16. Old-school Roman numerals. In the early days of Roman numerals, the 
+# # Romans didn’t bother with any of this new-fangled subtraction “IX” 
+# # nonsense. No, milady, it was straight addition, biggest to littlest — so
+# # 9 was written “VIIII,” and so on. Write a method that when passed an 
+# # integer between 1 and 3000 (or so) returns a string containing the proper
+# # old-school Roman numeral. In other words, old_roman_numeral 4 should 
+# # return 'IIII'. Make sure to test your method on a bunch of different numbers.
+# # Hint: Use the integer division and modulus methods. For reference, these
+# # are the values of the letters used: 
+# # I = 1 V = 5 X = 10 L = 50 C = 100 D = 500 M = 1000
+# def old_school(n = 1):
+# 	rom = ""
+# 	left = n
+# 	while (not (left == 0)):
+# 		if (n >= 1000):
+# 			m = n // 1000
+# 			left -= (m * 1000)
+# 			rom += ("M" * m)
+# 		if (left >= 500):
+# 			d = left // 500
+# 			left -= (d * 500)
+# 			rom += ("D" * d)
+# 		if (left >= 100):
+# 			c = left // 100
+# 			left -= (c * 100)
+# 			rom += ("C" * c)
+# 		if (left >= 50):
+# 			l = left // 50
+# 			left -= (l * 50)
+# 			rom += ("L" * l)
+# 		if (left >= 10):
+# 			x = left // 10
+# 			left -= (x * 10)
+# 			rom += ("X" * x)
+# 		if (left >= 5):
+# 			v = left // 5
+# 			left -= (v * 5)
+# 			rom += ("V" * v)
+# 		if (left >= 1):
+# 			i = left // 1
+# 			left -= (i * 1)
+# 			rom += ("I" * i)
 
-	return print(rom)
+# 	return print(rom)
 
-old_school(4)
-old_school(9)
-old_school(3000)
-old_school(2999)
-print()
+# old_school(4)
+# old_school(9)
+# old_school(3000)
+# old_school(2999)
+# print()
 
 # 17. “Modern” Roman numerals. Eventually, someone thought it would be 
 # terribly clever if putting a smaller number before a larger one meant
@@ -374,3 +374,57 @@ print()
 # you must now suffer. Rewrite your previous method to return the new - 
 # style Roman numerals so when someone calls roman_numeral 4, it should 
 # return 'IV', 90 should be 'XC' etc.
+# solution logic provided by @ Sriharsha Sammeta from geekfoorgeek.org
+# Improved by me @ pinedab
+import math
+
+def new_school(n = 0):
+  while(n > 3000 or n == 0):
+  	n = int(input("Enter a number btwn 1 - 3000:"))
+
+  romansDict = \
+      {
+          1: "I",
+          5: "V",
+          10: "X",
+          50: "L",
+          100: "C",
+          500: "D",
+          1000: "M",
+          5000: "G",
+          10000: "H"
+      }
+
+  div = 1
+  while n >= div:
+      div *= 10
+  
+  div //= 10
+ 
+  res = ""
+
+  while n:
+
+      # main significant digit extracted
+      # into lastNum 
+      lastNum = int(n // div)
+
+      if lastNum <= 3:
+          res += (romansDict[div] * lastNum)
+      elif lastNum == 4:
+          res += (romansDict[div] +
+                        romansDict[div * 5])
+      elif 5 <= lastNum <= 8:
+          res += (romansDict[div * 5] +
+          (romansDict[div] * (lastNum - 5)))
+      elif lastNum == 9:
+          res += (romansDict[div] +
+                        romansDict[div * 10])
+
+      n = math.floor(n % div)
+      div /= 10
+        
+  return str(res)
+
+print("Roman Numeral of Integer is: "
+		+ new_school())
