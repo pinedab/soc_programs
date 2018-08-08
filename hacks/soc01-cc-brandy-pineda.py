@@ -1,16 +1,26 @@
-a = [1, 1, 1, 1, 0,
-	 1, 1, 1, 0, 0,
-	 1, 0, 0, 0]
-b = 15
-c = 0
+import random
 
-if len(a) < b:
+def grid(row = 11, col = 11, chars = "XO"):
+	g = ''
+	for x in range(row):
+		g += ((''.join(random.choice(chars) for x in range(col))) + '\n')
+	return g
+
+def continent_count():
+	a = grid()
+	b = len(a)
+	c = 0
+	land = 0
+
 	for x in a:
-		if x == 0:
-				pass
-		else: 
+		if x == 'X':
+			land += 1
 			c = c + 1
-else: 
-	print("No land")
+		elif x == 'O': 
+			c = c + 1	
+		else: 
+			pass
 
-print(c)
+	return "Land: " + str(land) + "\nWater: " + str(b - land) + "\nTotal: " + str(b) + "\n" + a
+
+print(continent_count())
