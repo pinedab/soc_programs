@@ -109,18 +109,23 @@ world = [[o,o,o,o,o,o,o,o,o,o,o],
 		 [o,M,o,o,o,M,o,o,o,o,o],
 		 [o,o,o,o,o,o,o,o,o,o,o]]
 
-def read_elements(w = world):
-	for i in range(0, len(w)):
-		for j in range(0, len(w[i])):
+# def read_elements(w = world):
+# 	for i in range(0, len(w)):
+# 		for j in range(0, len(w[i])):
+# 			each = w[i][j]
+# 			print(each)
+
+# read_elements()
+# print()
+# 7. Now write a function that prints out all elements 
+# in reverse.
+def reverse_elements(w = world):
+	for i in range(len(w) - 1, -1, -1):
+		for j in range(len(w[i]) -1, -1, -1):
 			each = w[i][j]
 			print(each)
 
-read_elements()
-
-
-# 7. Now write a function that prints out all elements 
-# in reverse.
-
+reverse_elements()
 # 8. There is one small bug in the continent counter above.
 # Can you find it and fix it? (Hint: change the world so
 # that the continent borders the edge)
