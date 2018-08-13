@@ -68,32 +68,55 @@
 # cypher("What's your secret message?")
 # print()
 
-# 5. Optional: Write a function that does a ceaser cypher 
-# (Google), ask the user a number, and shift their message 
-# by that number.
-def ceasar(q):
-	msg = []
-	print(q)
-	shift = int(input("Pick a number: "))
-	reply = input('> ')
-	if isinstance(shift, int):
-		if reply:
-			for a in reply:
-				msg.append(ord(a) + shift)
-		else:
-			print("No message detected. Try again")
-			ceasar(q)
-	else:
-		print("Not a valid number. Try again")
-		ceasar(q)
-	return print(msg)
+# # 5. Optional: Write a function that does a ceaser cypher 
+# # (Google), ask the user a number, and shift their message 
+# # by that number.
+# def ceasar(q):
+# 	msg = []
+# 	print(q)
+# 	shift = int(input("Pick a number: "))
+# 	reply = input('> ')
+# 	if isinstance(shift, int):
+# 		if reply:
+# 			for a in reply:
+# 				msg.append(ord(a) + shift)
+# 		else:
+# 			print("No message detected. Try again")
+# 			ceasar(q)
+# 	else:
+# 		print("Not a valid number. Try again")
+# 		ceasar(q)
+# 	return print(msg)
 
-ceasar("What's your secret message?")
-print()
+# ceasar("What's your secret message?")
+# print()
+
 # 6. Write a function that prints out all elements of the
-# above board, starting from the first element of the 
+# below board, starting from the first element of the 
 # first line, till the end. Each line should be read 
 # from beginning to end.
+M = "land"
+o = "water"
+world = [[o,o,o,o,o,o,o,o,o,o,o],
+		 [o,o,o,o,M,M,o,o,o,o,o],
+		 [o,o,o,o,o,o,o,o,M,M,o],
+		 [o,o,o,M,o,o,o,o,o,M,o],
+		 [o,o,o,M,o,M,M,o,o,o,o],
+		 [o,o,o,o,M,M,M,M,o,o,o],
+		 [o,o,o,M,M,M,M,M,M,M,o],
+		 [o,o,o,M,M,o,M,M,M,o,o],
+		 [o,o,o,o,o,o,M,M,o,o,o],
+		 [o,M,o,o,o,M,o,o,o,o,o],
+		 [o,o,o,o,o,o,o,o,o,o,o]]
+
+def read_elements(w = world):
+	for i in range(0, len(w)):
+		for j in range(0, len(w[i])):
+			each = w[i][j]
+			print(each)
+
+read_elements()
+
 
 # 7. Now write a function that prints out all elements 
 # in reverse.
