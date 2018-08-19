@@ -1,4 +1,4 @@
-##### WEEK 2 DAY 2 #####
+##### SOC WEEK 2 DAY 2 #####
 
 ## Integer into a letter - chr() method ##
 for x in range(65,65 + 2 * 26 + 6):
