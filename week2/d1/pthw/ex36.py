@@ -1,5 +1,4 @@
 # Exercise 36 - Make my own adventure
-# Exercise 35 - Branches and Functions
 from sys import exit
 
 
